@@ -1,5 +1,5 @@
-name: 'Validates PR titles against Submitty guidelines'
-description: 'Validates PR titles against Submitty guidelines'
+name: 'Fixes PR titles from Dependabot for Submitty'
+description: 'Fixes PR titles from Dependabot for Submitty'
 
 branding:
   icon: 'check-square'
