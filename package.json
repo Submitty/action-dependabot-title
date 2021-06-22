@@ -1,5 +1,5 @@
 {
-  "name": "action-dependabot-title",
+  "name": "action-dependabot-title-fixer",
   "version": "1.0.0",
   "description": "",
   "main": "lib/index.js",

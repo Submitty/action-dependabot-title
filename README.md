@@ -1,14 +1,17 @@
-# action-pr-title
+# action-dependabot-title-fixer
 
-[![Test](https://github.com/Submitty/action-pr-title/actions/workflows/test.yml/badge.svg)](https://github.com/Submitty/action-pr-title/actions/workflows/test.yml)
+[![Test](https://github.com/Submitty/action-dependabot-title-fixer/actions/workflows/test.yml/badge.svg)](https://github.com/Submitty/action-dependabot-title-fixer/actions/workflows/test.yml)
 
-GitHub action that validates PR titles meets [our title guidelines](https://submitty.org/developer/how_to_contribute#how-to-make-a-pull-request-pr-to-submitty).
+GitHub action that fixes the PR title Dependabot uses so that it meets
+[our title guidelines](https://submitty.org/developer/how_to_contribute#how-to-make-a-pull-request-pr-to-submitty).
+Dependabot on creating a new PR will append a `:` to the module type (e.g. `[DevDependency]:`), and there's no way
+to configure it to not do this (see [dependabot/dependabot-core#2934](https://github.com/dependabot/dependabot-core/issues/2934)).
 
 ## Usage
 
 ```yaml
 
-name: 'PR Title Check'
+name: 'Dependabot Title Fixer'
 on:
   pull_request:
     # check when PR
@@ -21,5 +24,5 @@ jobs:
   title-check:
     runs-on: ubuntu-latest
     steps:
-      - uses: submitty/action-pr-title@master
+      - uses: submitty/action-dependabot-title-fixer@master
 ```
