@@ -25,4 +25,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: submitty/action-dependabot-title-fixer@master
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 ```
