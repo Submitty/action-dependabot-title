@@ -1,6 +1,11 @@
 name: 'Fixes PR titles from Dependabot for Submitty'
 description: 'Fixes PR titles from Dependabot for Submitty'
 
+inputs:
+  token:
+    description: 'GitHub token to use for updating PR'
+    required: true
+
 branding:
   icon: 'check-square'
   color: 'blue'
