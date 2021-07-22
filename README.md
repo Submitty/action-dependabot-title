@@ -7,13 +7,17 @@ GitHub action that fixes the PR title Dependabot uses so that it meets
 Dependabot on creating a new PR will append a `:` to the module type (e.g. `[DevDependency]:`), and there's no way
 to configure it to not do this (see [dependabot/dependabot-core#2934](https://github.com/dependabot/dependabot-core/issues/2934)).
 
+__Note__: If you are using additional actions that depend on the `pull_request` or `pull_request_target` action types, you'll want to use a
+[Personal Access Token](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+scoped for `repo` instead of `${{ secrets.GITHUB_TOKEN }}`. The regular GH token will not trigger additional actions to run.
+
 ## Usage
 
 ```yaml
 
 name: 'Dependabot Title Fixer'
 on:
-  pull_request:
+  pull_request_target:
     # check when PR
     # * is created,
     # * title is edited, and
