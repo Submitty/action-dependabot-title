@@ -7,7 +7,7 @@
     "build": "tsc",
     "lint": "eslint src test",
     "lint:fix": "prettier --write \"**/*.ts\"",
-    "package": "ncc build --source-map --license licenses.txt",
+    "package": "npm run build && ncc build --source-map --license licenses.txt",
     "test": "TS_NODE_PROJECT='./tsconfig.test.json' mocha --require ts-node/register --reporter spec --recursive './test/**/*.ts'",
     "prepare": "husky install"
   },
