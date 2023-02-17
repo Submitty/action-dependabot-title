@@ -1,3 +1,5 @@
+__NOTE__: This repository has been archived as the max length for prefixes for dependabot was increased per [this comment](https://github.com/dependabot/dependabot-core/issues/2934#issuecomment-1416715959) in November 2022, and so we can now properly use `[DevDependency] `.
+
 # action-dependabot-title-fixer
 
 [![Test](https://github.com/Submitty/action-dependabot-title-fixer/actions/workflows/test.yml/badge.svg)](https://github.com/Submitty/action-dependabot-title-fixer/actions/workflows/test.yml)
